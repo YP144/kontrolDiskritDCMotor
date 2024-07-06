@@ -1,0 +1,31 @@
+ts = 0.2;
+NIM = 26;
+
+z = tf('z',ts);
+tfSistemAwal = ( ( (2.1+NIM/10)*z )+(0.52*(1+NIM/10) ) ) / (z^2 - 0.57*z + 0.021*(1-NIM/10) ) 
+gainP = 0.38;
+figure();
+rlocus(gainp*tfSistemAwal)
+
+
+% figure();
+% step(gainP*tfSistemAwal)
+% stepinfo(gainP*tfSistemAwal)
+% 
+% figure();
+% step(feedback(gainP*tfSistemAwal,1))
+% stepinfo(feedback(gainP*tfSistemAwal,1))
+% 
+% tfSistemAwalCont = d2c(tfSistemAwal);
+% 
+% figure();
+% step(gainP*tfSistemAwalCont)
+% stepinfo(gainP*tfSistemAwalCont)
+% 
+% figure();
+% step(feedback(gainP*tfSistemAwalCont,1))
+% stepinfo(feedback(gainP*tfSistemAwalCont,1))
+% 
+% figure();
+% step(feedback(tfSistemAwalCont,1))
+% stepinfo(feedback(tfSistemAwalCont,1))
